@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Escolar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bs/bootstrap-4.4.1-dist/css/bootstrap.css">
+</head>
+<body>
+    <header>
+        <div id="logo_title">
+            <img src="gm/img/logo_tecnm_blanco.png" alt="logo_tecnm" id="logo">
+            <h1 id="title">Inscripciones</h1>
+        </div>
+    </header>
+    <form class="form-horizontal">
+        <h1>Información Básica</h1>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="name">Nombre:</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="first_surname">Apellido Paterno:</label>
+                <input type="text" class="form-control" id="first_surname">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="second_surname">Apellido Materno:</label>
+                <input type="text" class="form-control" id="second_surname">
+            </div>
+            <div class="form-group col-md-4">
+               <label for="id_student">Matrícula:</label>
+                <input type="text" class="form-control" id="id_student"> 
+            </div>
+            <div class="form-group col-md-8">
+                <p>
+                    <label for="carrer">Carrera:</label>
+                    <select name="carrer" class="form-control">
+                        <option value=""></option>
+                        <option value="systems">Ingeniería en Sistemas Computacionales</option>
+                        <option value="management">Ingeniería en Gestión Empresarial</option>
+                        <option value="industrial">Ingeniería Industrial</option>
+                    </select>
+                </p>
+            </div>
+            <div class="form-group col-md-12">
+                <button type="button" class="btn btn-primary btn-block" id="button_consult" onclick="academic_data()">Consultar</button>
+            </div>
+        </div>
+    </form>
+    <form class="form-horizontal">
+        <h1>Información Académica</h1>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="">Promedio General:</label>
+                <label class="form-control collectes-ville text-center" id="general_average"></label>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="">Promedio Semestral:</label>
+                <label class="form-control collectes-ville text-center" id="semester_average"></label>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="">Creditos Cursados:</label>
+                <label class="form-control collectes-ville text-center" id="credits_completed"></label>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="">Creditos sin Cursar:</label>
+                <label class="form-control collectes-ville text-center" id="credits_without_complete"></label>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="">Semestre Cursado:</label>
+                <label class="form-control collectes-ville text-center" id="semester_completed"></label>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="">Semestre a Cursar:</label>
+                <label class="form-control collectes-ville text-center" id="semester_to_complete"></label>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="">Grupo:</label>
+                <label class="form-control collectes-ville text-center" id="group"></label>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="">Estatus:</label>
+                <label class="form-control collectes-ville text-center" id="status"></label>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="">Adeudos:</label>
+                <label class="form-control collectes-ville text-center" id="debts"></label>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="">></label>
+                <button type="button" class="btn btn-primary btn-block" id="button_next" onclick="pay_data()">Continuar</button>
+            </div>
+        </div>
+    </form>
+    <form class="form-horizontal">
+        <h1>Información de Pago</h1>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="">Monto Depositado:</label>
+                <label class="form-control collectes-ville text-center" id="deposit"></label>
+            </div>
+            <div class="form-group col-md-12">
+                <button type="button" class="btn btn-primary btn-block" id="button_enroll" onclick="alert('¡Incrito!')">Inscribir</button>
+            </div>
+        </div>
+    </form>
+    <script>
+        function academic_data() {
+            document.getElementById("general_average").innerHTML="88";
+            document.getElementById("semester_average").innerHTML="90";
+            document.getElementById("credits_completed").innerHTML="110";
+            document.getElementById("credits_without_complete").innerHTML="110";
+            document.getElementById("semester_completed").innerHTML="4";
+            document.getElementById("semester_to_complete").innerHTML="5";
+            document.getElementById("group").innerHTML="C5";
+            document.getElementById("status").innerHTML="Regular";
+            document.getElementById("debts").innerHTML="No";
+        }
+        function pay_data() {
+            document.getElementById("deposit").innerHTML="$1,200.00";
+        }
+    </script>
+</body>
+</html>

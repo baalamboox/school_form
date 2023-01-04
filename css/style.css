@@ -1,0 +1,21 @@
+header {
+    width: 100%;
+    height: auto;
+    background-color:rgb(26, 58, 103);
+}
+#logo_title {
+    width: 50%;
+    margin: 0px auto;
+    color: white;
+    text-align: center;
+}
+form {
+    width: 80%;
+    padding: 10px;
+    margin: 0px auto;
+    border-radius: 10px;
+    align-content: center;
+}
+#button_consult, #button_next, #button_enroll {
+    background-color: rgb(26, 58, 103);
+}
